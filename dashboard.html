@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="setupProfile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="script.js" />
+    <link rel="stylesheet" href="bar.css" />
+    <link rel="stylesheet" href="results.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header>
+      <div class="constantheader">
+        <img class="logsmall" src="logo54.png" alt="Logo" />
+
+        <div class="middlesearchbar">
+          <div class="container">
+            <div class="bar">
+              <div class="whereInput">
+                <label for="where">Where:</label>
+
+                <input
+                  type="where"
+                  id="where"
+                  pattern="Munich"
+                  size="30"
+                  required
+                  placeholder="Munich"
+                />
+                <ul id="cityList"></ul>
+              </div>
+              <div class="durationInput">
+                <label for="start">Start date:</label>
+
+                <input
+                  type="date"
+                  id="start"
+                  name="trip-start"
+                  value="2024-07-22"
+                  min="2024-06-01"
+                  max="2026-12-31"
+                />
+              </div>
+              <div class="groupoficons">
+                <div class="backgroundOfSearchIcon"></div>
+                <div class="SearchAttraction">
+                  <a href="resultDashboard.html"
+                    ><img src="search.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            const cityListElement = document.getElementById("cityList");
+            const inputField = document.getElementById("where");
+
+            const cities = [
+              "Munich 🇩🇪",
+              "Berlin 🇩🇪",
+              "Paris 🇫🇷",
+              "Amsterdam 🇳🇱",
+              "Luzern 🇨🇭",
+              "Basel 🇨🇭",
+              "London 🇬🇧",
+            ];
+
+            // Function to handle showing/hiding suggestions
+            function toggleSuggestions(show) {
+              cityListElement.style.display = show ? "block" : "none";
+            }
+
+            // Populate the dropdown list with all cities initially
+            cities.forEach((city) => {
+              const listItem = document.createElement("li");
+              listItem.textContent = city;
+              cityListElement.appendChild(listItem);
+
+              // Add mouseenter and mouseleave events for hover effect
+              listItem.addEventListener("mouseenter", () => {
+                listItem.style.color = "white"; // Change color on hover
+              });
+              listItem.addEventListener("mouseleave", () => {
+                listItem.style.color = ""; // Reset color on leave
+              });
+
+              // Add click event listener to each city list item
+              listItem.addEventListener("click", (event) => {
+                event.stopPropagation(); // Prevent event bubbling
+                setTimeout(() => {
+                  inputField.value = city;
+                }, 0);
+                toggleSuggestions(false); // Hide suggestions on selection
+              });
+            });
+
+            // Focus on click to allow user interaction
+            inputField.addEventListener("click", () => {
+              inputField.focus();
+              toggleSuggestions(true); // Show suggestions on click
+            });
+
+            // Hide suggestions on document click (outside the input field)
+            document.addEventListener("click", (event) => {
+              if (!event.target.matches("#where")) {
+                // Check if clicked outside input
+                toggleSuggestions(false); // Hide suggestions
+              }
+            });
+          </script>
+        </div>
+        <div class="profilesection">
+          <h2 class="miniprofile">Profile</h2>
+
+          <img
+            class="profilepicture"
+            src="peri.png"
+            alt="Profile Picture of user"
+            width="30px"
+          />
+        </div>
+      </div>
+      <hr class="black-line" />
+    </header>
+    <!-- dynamic results -->
+    <div class="InstructionsPage">
+      <div class="spinningEarth">
+        <img src="icons8-erde.svg" alt="Earth Icon" />
+        <div class="instruction">
+          <h1>Pick a <span id="cityStyling">city</span>, you want to enjoy</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

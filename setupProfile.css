@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: icn;
+  src: url(pacifico\ Kopie.ttf);
+}
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* header */
+
+.constantheader {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+.profilesection {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  height: 20px;
+  align-items: center;
+  padding: 25px;
+  border-radius: 60px;
+  border: solid #dddddd;
+  cursor: pointer;
+}
+
+.profilesection h2 {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.profilepicture {
+  border-radius: 50%;
+  margin-left: 20px;
+  height: 40px;
+  width: auto;
+}
+
+.logsmall,
+img {
+  height: 60px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.black-line {
+  border: none; /* Remove default border */
+  height: 1px; /* Set the height */
+  background-color: #eeeeee; /* Set the color to black */
+}

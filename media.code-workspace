@@ -1,0 +1,12 @@
+{
+  "folders": [
+	{
+		"name": "media",
+		"path": "../media"
+	},
+	{
+		"name": "Code",
+		"path": "."
+	}
+]
+}

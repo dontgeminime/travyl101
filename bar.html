@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bar.css" />
+    <script src="bar.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bar">
+        <div class="whereInput">
+          <label for="where">Where:</label>
+
+          <input
+            type="where"
+            id="where"
+            pattern="Munich"
+            size="30"
+            required
+            placeholder="Munich"
+          />
+          <ul id="cityList"></ul>
+        </div>
+        <div class="durationInput">
+          <label for="start">Start date:</label>
+
+          <input
+            type="date"
+            id="start"
+            name="trip-start"
+            value="2024-07-22"
+            min="2024-06-01"
+            max="2026-12-31"
+          />
+        </div>
+        <div class="groupoficons">
+          <div class="backgroundOfSettingicon">
+            <img
+              class="settingIcon"
+              src="settings.svg"
+              alt="Icon for settings"
+            />
+          </div>
+          <div class="backgroundOfSearchIcon">
+            <img
+              class="searchIcons"
+              src="search.svg"
+              alt="Icon for searchbar"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const cityListElement = document.getElementById("cityList");
+    const inputField = document.getElementById("where");
+
+    const cities = [
+      "Munich 🇩🇪",
+      "Berlin 🇩🇪",
+      "Paris 🇫🇷",
+      "Amsterdam 🇳🇱",
+      "Luzern 🇨🇭",
+      "Basel 🇨🇭",
+      "London 🇬🇧",
+    ];
+
+    // Function to handle showing/hiding suggestions
+    function toggleSuggestions(show) {
+      cityListElement.style.display = show ? "block" : "none";
+    }
+
+    // Populate the dropdown list with all cities initially
+    cities.forEach((city) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = city;
+      cityListElement.appendChild(listItem);
+
+      // Add mouseenter and mouseleave events for hover effect
+      listItem.addEventListener("mouseenter", () => {
+        listItem.style.color = "white"; // Change color on hover
+      });
+      listItem.addEventListener("mouseleave", () => {
+        listItem.style.color = ""; // Reset color on leave
+      });
+
+      // Add click event listener to each city list item
+      listItem.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent event bubbling
+        setTimeout(() => {
+          inputField.value = city;
+        }, 0);
+        toggleSuggestions(false); // Hide suggestions on selection
+      });
+    });
+
+    // Focus on click to allow user interaction
+    inputField.addEventListener("click", () => {
+      inputField.focus();
+      toggleSuggestions(true); // Show suggestions on click
+    });
+
+    // Hide suggestions on document click (outside the input field)
+    document.addEventListener("click", (event) => {
+      if (!event.target.matches("#where")) {
+        // Check if clicked outside input
+        toggleSuggestions(false); // Hide suggestions
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Softer background */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure full viewport height */
+}
+
+.register-container {
+  /* New container for centering */
+  text-align: center;
+}
+
+.register-box {
+  background-color: #fff;
+  padding: 30px; /* More padding for visual comfort */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 350px; /* Slightly wider */
+  font-family: "Manrope";
+}
+
+.register-box h2 {
+  margin-bottom: 25px;
+}
+
+.register-box input[type="text"],
+.register-box input[type="date"],
+.register-box input[type="tel"],
+.register-box input[type="email"] {
+  width: calc(100% - 22px); /* Account for padding */
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd; /* Lighter border */
+  border-radius: 5px;
+}
+
+.checkbox-container {
+  /* Style the checkbox area */
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.register-box button,
+.register-box .google-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Slightly larger font */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.register-box button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.register-box .google-btn {
+  background-color: #db4437; /* Google red */
+  color: white;
+}
+
+.register-box button:hover,
+.register-box .google-btn:hover {
+  opacity: 0.9; /* Subtle darkening on hover */
+}
+
+.google-btn {
+  margin-top: 20px;
+}
+
+.register-box p {
+  padding-bottom: 12px;
+}
+
+.profile-image-container {
+  margin-bottom: 15px; /* Add some spacing below the image upload */
+}
+
+.profile-image-container label {
+  display: block; /* Display the label on a new line */
+  margin-bottom: 5px; /* Add spacing between label and input */
+  font-family: "Manrope";
+}

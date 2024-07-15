@@ -1,0 +1,120 @@
+/* Center align the qBoxes horizontally and vertically */
+.qBoxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping to fit smaller screens */
+  height: 70vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style for each question box */
+.question-box {
+  width: 300px; /* Fixed width for all boxes */
+  padding: 30px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin: 10px; /* Adjust margin between boxes */
+  border-radius: 12px;
+}
+
+/* Style for checkboxes and labels */
+.question-box input[type="checkbox"] {
+  margin-right: 5px;
+}
+.question-box label {
+  margin-right: 10px;
+  font-family: "Manrope";
+}
+
+.question-box p {
+  font-family: "Manrope";
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Floating Save Button */
+.floating-save-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure button is above other elements */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+.floating-save-btn:hover {
+  background-color: navy; /* Change color on hover */
+}
+
+.floating-next-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  padding: 10px 20px;
+  background-color: #fb4b3d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure button is above other elements */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  display: none; /* Initially hidden */
+}
+
+/* Popup Notification */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8); /* Initial scale down effect */
+  background-color: #fb4b3d;
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for opacity and transform */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999; /* Ensure popup is above other elements */
+  font-family: "Manrope";
+  font-size: 20px;
+}
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1); /* Scale up effect */
+}
+
+.instEx {
+  display: flex;
+  justify-content: center;
+}
+.instructionsexplained {
+  font-family: "Manrope";
+  line-height: 0.5;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#logoregister,
+img {
+  height: 40px;
+  margin-top: 20px;
+}
+
+.boxesTwo,
+.boxesOne {
+  margin-bottom: 100px;
+}

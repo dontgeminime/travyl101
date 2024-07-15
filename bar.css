@@ -1,0 +1,147 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categoryName {
+  z-index: 0;
+}
+
+.bar {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  border: solid #dddddd;
+  border-radius: 12px;
+  width: 650px;
+  height: 100px;
+  transition: 0.5s;
+}
+.bar:hover {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px;
+  border: solid #dddddd;
+  border-radius: 12px;
+  width: 650px;
+  height: 110px;
+}
+
+/* group of icons */
+.groupoficons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #ff385c;
+  padding: 20px;
+  border-radius: 50%;
+  margin-top: 15px;
+}
+
+.groupoficons:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #f535a3;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.backgroundOfSearchIcon,
+img {
+  height: 25px;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  font-family: "Manrope", sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 10;
+}
+
+#where {
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  border: solid #dddddd;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+#where:focus {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: solid #dddddd;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
+#start {
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  border: solid #dddddd;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+#cityList {
+  display: none;
+  background-color: #ff385c;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: "Manrope", sans-serif;
+  cursor: pointer;
+  box-shadow: #c6c4c4 20px 6px 10px;
+  position: relative;
+  z-index: 30;
+}
+
+#cityList.show {
+  display: block;
+}
+
+.hover-city {
+  color: white; /* Change color to your preference */
+}
+
+.SearchAttraction a {
+  background-color: red;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.SearchAttraction a:hover {
+  background-color: #f535a3;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* test */

@@ -1,0 +1,143 @@
+.PrefRes {
+  z-index: 0;
+}
+
+.cardContainers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  gap: 10px;
+  margin-top: 30px;
+  z-index: 1;
+}
+
+.BackgOfCard {
+  background: hsla(267, 43%, 80%, 0.1);
+  padding: 20px 10px;
+  border-radius: 12px;
+  margin-top: 10px;
+  border: solid #dddddd;
+}
+
+.cardOfBuddy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#buddyIMG {
+  border-radius: 12px;
+  transition: 0.4s;
+  margin-bottom: 6px;
+  width: 16rem;
+  height: 16rem;
+}
+
+/* Text styling */
+.textOfCard {
+  width: 18rem;
+}
+
+.nameOfBuddy,
+h2 {
+  font-size: 23px;
+  margin-bottom: 4px;
+  font-family: "Manrope";
+}
+
+.nameOfBuddy,
+h3 {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-family: "Manrope";
+}
+
+.nameOfBuddy,
+p {
+  font-size: 12px;
+  margin-bottom: 7px;
+  font-family: "Manrope";
+  font-weight: 250;
+}
+
+/* .buddyImg:hover {
+  width: 23rem;
+  border-radius: 12px;
+} */
+
+.preferences {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pref-info {
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  background-color: #1b65d1;
+  padding: 5px;
+  border-radius: 9px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.connectButton,
+a {
+  background-color: #fa4b3c;
+  color: white;
+  text-decoration: none;
+  padding: 5px 16px;
+  border-radius: 4px;
+}
+
+.communityFace a {
+  background-color: #fa4b3c;
+  top: 35px;
+  left: 570px;
+  font-size: 10px;
+  z-index: 2;
+}
+
+.BackgOfCard {
+  position: relative; /* Make the card container relative for absolute positioning */
+}
+
+.communityFace {
+  position: absolute; /* Make the "Community" element absolutely positioned */
+  top: 30px; /* Adjust top position as needed */
+  left: 190px; /* Adjust left position as needed */
+}
+
+.categoryName {
+  padding: 30px;
+  font-family: "Manrope";
+  color: #fa4b3c;
+}
+
+/* No Results */
+
+.InstructionsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinningEarth {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.spinningEarth img {
+  height: 350px;
+}
+
+span {
+  font-family: "Pacifico", sans-serif;
+  margin-right: 5px;
+  color: #fa4b3c;
+}

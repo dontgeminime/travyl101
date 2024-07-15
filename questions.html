@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Boxes</title>
+    <link rel="stylesheet" href="question.css" />
+    <link rel="stylesheet" href="results.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- test -->
+  <header>
+    <img id="logoRegister" src="logo54.png" alt="" />
+  </header>
+
+  <body>
+    <div class="instEx">
+      <div class="instructionsexplained">
+        <h1>We need more Information</h1>
+        <h2>Tell us more about your preferences ✨</h2>
+      </div>
+    </div>
+    <div class="qBoxes">
+      <div class="boxesOne">
+        <div class="question-box">
+          <p>Tell us more about your type</p>
+          <div id="checkboxes1">
+            <input type="checkbox" id="checkbox1" value="Experiences" />
+            <label for="checkbox1">Sporty</label><br />
+            <input type="checkbox" id="checkbox2" value="Food" />
+            <label for="checkbox2">Foody</label><br />
+            <input type="checkbox" id="checkbox3" value="Cultural Tours" />
+            <label for="checkbox3">Cultural</label><br />
+            <input type="checkbox" id="checkbox4" value="Outdoor Adventure" />
+            <label for="checkbox4">Outdoor</label><br />
+            <input
+              type="checkbox"
+              id="checkbox5"
+              value="Nightlife & Entertainment"
+            />
+            <label for="checkbox5">Nightlife</label>
+          </div>
+        </div>
+        <div class="question-box">
+          <p>Which of these options appeal to you?</p>
+          <div id="checkboxes2">
+            <input
+              type="checkbox"
+              id="checkbox6"
+              value="Local Guides & Hosts"
+            />
+            <label for="checkbox6">Creativity</label><br />
+            <input type="checkbox" id="checkbox7" value="Language Exchange" />
+            <label for="checkbox7">Originality</label><br />
+            <input type="checkbox" id="checkbox8" value="Skills & Workshops" />
+            <label for="checkbox8">Artistic</label><br />
+            <input type="checkbox" id="checkbox9" value="Cooking Classes" />
+            <label for="checkbox9">Playful</label><br />
+            <input type="checkbox" id="checkbox10" value="Pet Care & Walking" />
+            <label for="checkbox10">Open-minded</label>
+          </div>
+        </div>
+      </div>
+      <div class="boxesTwo">
+        <div class="question-box">
+          <p>Tell us what you want to do</p>
+          <div id="checkboxes3">
+            <input type="checkbox" id="checkbox11" value="Experiences" />
+            <label for="checkbox11">Athletics</label><br />
+            <input type="checkbox" id="checkbox12" value="Food" />
+            <label for="checkbox12">Discover the city</label><br />
+            <input type="checkbox" id="checkbox13" value="Cultural Tours" />
+            <label for="checkbox13">Cultural Tours</label><br />
+            <input type="checkbox" id="checkbox14" value="Outdoor Adventure" />
+            <label for="checkbox14">See how locals live</label><br />
+            <input
+              type="checkbox"
+              id="checkbox15"
+              value="Nightlife & Entertainment"
+            />
+            <label for="checkbox15">Something of everything</label>
+          </div>
+        </div>
+        <div class="question-box">
+          <p>So you can find the best fit for you in the city!</p>
+          <div id="checkboxes4">
+            <input
+              type="checkbox"
+              id="checkbox16"
+              value="Local Guides & Hosts"
+            />
+            <label for="checkbox16">Locals & Guides & Hosts</label><br />
+            <input type="checkbox" id="checkbox17" value="Language Exchange" />
+            <label for="checkbox17">Local Communitys</label><br />
+            <input type="checkbox" id="checkbox18" value="Skills & Workshops" />
+            <label for="checkbox18">On my own</label><br />
+            <input type="checkbox" id="checkbox19" value="Cooking Classes" />
+            <label for="checkbox19">Suprise me</label><br />
+            <input type="checkbox" id="checkbox20" value="Pet Care & Walking" />
+            <label for="checkbox20">I want to see</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Floating Save and Next Button -->
+    <div class="floating-buttons">
+      <button id="nextButton" class="floating-next-btn" onclick="goToNext()">
+        Next
+      </button>
+      <button class="floating-save-btn" onclick="saveAll()">Save</button>
+    </div>
+
+    <!-- Lottie Animation Popup -->
+    <div id="popup" class="popup">
+      <script
+        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"
+      ></script>
+      <dotlottie-player
+        src="https://lottie.host/1141d6b3-c312-4c52-a6cf-2acbfa77800a/KlwRYEnpwd.json"
+        background="transparent"
+        speed="1"
+        style="width: 150px; height: 150px"
+        loop
+        autoplay
+      ></dotlottie-player>
+      <p>Saved!</p>
+    </div>
+
+    <script src="question.js"></script>
+  </body>
+</html>

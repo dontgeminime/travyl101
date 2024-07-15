@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="script.js" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Travyl Login</title>
+  </head>
+
+  <body>
+    <div class="loginpage">
+      <!-- LEFT SIDE STARTS HERE -->
+      <div class="leftside">
+        <img class="logotravyl" src="white .png" alt="logo of travyl" />
+
+        <h1>
+          Be local<br />
+          everywhere <br />
+        </h1>
+      </div>
+      <!-- LEFT SIDE ENDS HERE -->
+      <!-- RIGHT SIDE STARTSHERE -->
+      <div class="rightside">
+        <div class="logincontainer">
+          <h2 class="highlight">Login</h2>
+          <div class="socialbtn">
+            <a href="#"
+              ><button>
+                <img src="G.svg" alt="" />Login with Google
+              </button></a
+            >
+          </div>
+          <h2 class="highlight second">or</h2>
+          <!-- Input Container Starts -->
+          <div class="passwordinput">
+            <label for="email">E-Mail:</label>
+            <input
+              type="email"
+              id="email"
+              pattern=".+@example\.com"
+              size="30"
+              required
+              placeholder="E.g John@Doe@email.com"
+            />
+
+            <label for="pass">Password:</label>
+            <input
+              type="password"
+              id="pass"
+              name="password"
+              minlength="8"
+              placeholder="E.g Password"
+              required
+            />
+            <input
+              type="submit"
+              value="Sign in"
+              id="submitButton"
+              onclick="checkLogin()"
+            />
+            <div class="registerField">
+              <a href="register.html">Register now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function redirectToSetupProfile() {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // Redirect to the desired URL
+      window.location.href = "dashboard.html";
+    }
+
+    function checkLogin() {
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("pass");
+
+      const email = emailInput.value;
+      const password = passwordInput.value;
+
+      // Replace with your desired hardcoded credentials
+      const expectedEmail = "peri@gmail.com";
+      const expectedPassword = "123";
+
+      if (email === expectedEmail && password === expectedPassword) {
+        // Login successful - redirect to next page
+        redirectToSetupProfile();
+      } else {
+        // Login failed - display an error message
+        alert("Invalid email or password!");
+      }
+    }
+  </script>
+</html>

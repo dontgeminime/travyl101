@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="setupProfile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="script.js" />
+    <link rel="stylesheet" href="bar.css" />
+    <link rel="stylesheet" href="results.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>SetupProfile</title>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header>
+      <div class="constantheader">
+        <img class="logsmall" src="logo54.png" alt="Logo" />
+
+        <div class="middlesearchbar">
+          <div class="container">
+            <div class="bar">
+              <div class="whereInput">
+                <label for="where">Where:</label>
+
+                <input
+                  type="where"
+                  id="where"
+                  pattern="Munich"
+                  size="30"
+                  required
+                  placeholder="Munich"
+                />
+                <ul id="cityList"></ul>
+              </div>
+              <div class="durationInput">
+                <label for="start">Start date:</label>
+
+                <input
+                  type="date"
+                  id="start"
+                  name="trip-start"
+                  value="2024-07-22"
+                  min="2024-06-01"
+                  max="2026-12-31"
+                />
+              </div>
+              <div class="groupoficons">
+                <div class="backgroundOfSearchIcon"></div>
+                <div class="SearchAttraction">
+                  <a href="#"><img src="search.svg" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            const cityListElement = document.getElementById("cityList");
+            const inputField = document.getElementById("where");
+
+            const cities = [
+              "Munich 🇩🇪",
+              "Berlin 🇩🇪",
+              "Paris 🇫🇷",
+              "Amsterdam 🇳🇱",
+              "Luzern 🇨🇭",
+              "Basel 🇨🇭",
+              "London 🇬🇧",
+            ];
+
+            // Function to handle showing/hiding suggestions
+            function toggleSuggestions(show) {
+              cityListElement.style.display = show ? "block" : "none";
+            }
+
+            // Populate the dropdown list with all cities initially
+            cities.forEach((city) => {
+              const listItem = document.createElement("li");
+              listItem.textContent = city;
+              cityListElement.appendChild(listItem);
+
+              // Add mouseenter and mouseleave events for hover effect
+              listItem.addEventListener("mouseenter", () => {
+                listItem.style.color = "white"; // Change color on hover
+              });
+              listItem.addEventListener("mouseleave", () => {
+                listItem.style.color = ""; // Reset color on leave
+              });
+
+              // Add click event listener to each city list item
+              listItem.addEventListener("click", (event) => {
+                event.stopPropagation(); // Prevent event bubbling
+                setTimeout(() => {
+                  inputField.value = city;
+                }, 0);
+                toggleSuggestions(false); // Hide suggestions on selection
+              });
+            });
+
+            // Focus on click to allow user interaction
+            inputField.addEventListener("click", () => {
+              inputField.focus();
+              toggleSuggestions(true); // Show suggestions on click
+            });
+
+            // Hide suggestions on document click (outside the input field)
+            document.addEventListener("click", (event) => {
+              if (!event.target.matches("#where")) {
+                // Check if clicked outside input
+                toggleSuggestions(false); // Hide suggestions
+              }
+            });
+          </script>
+        </div>
+        <div class="profilesection">
+          <h2 class="miniprofile">Profile</h2>
+
+          <img
+            class="profilepicture"
+            src="peri.png"
+            alt="Profile Picture of user"
+            width="30px"
+          />
+        </div>
+      </div>
+      <hr class="black-line" />
+    </header>
+    <!-- dynamic results -->
+    <div class="PrefRes">
+      <div class="categoryName">
+        <h4 title="Based on your preferences">Outdoor Adventures</h4>
+      </div>
+      <div class="cardContainers">
+        <div class="BackgOfCard">
+          <div class="cardOfBuddy">
+            <img
+              class="buddyImg"
+              src="chan.png"
+              id="buddyIMG"
+              alt="Leon Profile Picture"
+            />
+            <div class="textOfCard">
+              <div class="nameOfBuddy">
+                <h2>Leon</h2>
+              </div>
+              <div class="preference_description">
+                <h3>Draw the most beautiful parts of Munich.</h3>
+              </div>
+              <div class="bioOfBuddy">
+                <p>Let's connect and explore the best spots to draw.</p>
+              </div>
+            </div>
+            <div class="preferences">
+              <a class="pref-info" href="#">Drawing</a>
+              <a class="pref-info" href="#">Coffee</a>
+              <a class="pref-info" href="#">Creative</a>
+              <a class="pref-info" href="#">Walking</a>
+              <a class="pref-info" href="#">Artistic</a>
+            </div>
+            <div class="connectButton">
+              <a href="#">Lets Connect &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <!-- person 2 -->
+        <div class="BackgOfCard">
+          <div class="cardOfBuddy">
+            <img
+              class="buddyImg"
+              id="buddyIMG"
+              src="jessica.png"
+              alt="Leah Profile Picture"
+            />
+            <div class="textOfCard">
+              <div class="nameOfBuddy">
+                <h2>Leah</h2>
+              </div>
+              <div class="preference_description">
+                <h3>Run Munich's Beauty</h3>
+              </div>
+              <div class="bioOfBuddy">
+                <p>hidden gems & iconic sights on a scenic tour</p>
+              </div>
+            </div>
+            <div class="preferences">
+              <a class="pref-info" href="#">Drawing</a>
+              <a class="pref-info" href="#">Coffee</a>
+              <a class="pref-info" href="#">Creative</a>
+              <a class="pref-info" href="#">Walking</a>
+              <a class="pref-info" href="#">Artistic</a>
+            </div>
+            <div class="connectButton">
+              <a href="#">Lets Connect &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <!-- person 3 -->
+        <div class="BackgOfCard">
+          <div class="communityFace">
+            <a class="communityButton" href="#">Community</a>
+          </div>
+          <div class="cardOfBuddy">
+            <img
+              class="buddyImg"
+              id="buddyIMG"
+              src="yoga.jpg"
+              alt="Munyoga Profile Picture"
+            />
+            <div class="textOfCard">
+              <div class="nameOfBuddy">
+                <h2>Munyoga</h2>
+              </div>
+              <div class="preference_description">
+                <h3>De-Stress in Munich</h3>
+              </div>
+              <div class="bioOfBuddy">
+                <p>Unwind with a yoga session in a peaceful setting</p>
+              </div>
+            </div>
+            <div class="preferences">
+              <a class="pref-info" href="#">Drawing</a>
+              <a class="pref-info" href="#">Coffee</a>
+              <a class="pref-info" href="#">Creative</a>
+              <a class="pref-info" href="#">Walking</a>
+              <a class="pref-info" href="#">Artistic</a>
+            </div>
+            <div class="connectButton">
+              <a href="#">Lets Connect &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <!-- fourth person -->
+        <div class="BackgOfCard">
+          <div class="cardOfBuddy">
+            <img
+              class="buddyImg"
+              id="buddyIMG"
+              src="bycicle.png"
+              alt="Anna Profile Picture"
+            />
+            <div class="textOfCard">
+              <div class="nameOfBuddy">
+                <h2>Anna</h2>
+              </div>
+              <div class="preference_description">
+                <h3>Isar River Adventure</h3>
+              </div>
+              <div class="bioOfBuddy">
+                <p>Explore Munich, bike along the scenic Isar River.</p>
+              </div>
+            </div>
+            <div class="preferences">
+              <a class="pref-info" href="#">Drawing</a>
+              <a class="pref-info" href="#">Coffee</a>
+              <a class="pref-info" href="#">Creative</a>
+              <a class="pref-info" href="#">Walking</a>
+              <a class="pref-info" href="#">Artistic</a>
+            </div>
+            <div class="connectButton">
+              <a href="profileToBook.html">Lets Connect &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

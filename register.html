@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <main class="register-container">
+      <div class="register-box">
+        <h2>Register</h2>
+        <p>to be local everywhere</p>
+        <form
+          action="questions.html"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <input type="text" placeholder="Name" required />
+          <input type="text" placeholder="Lastname" required />
+          <input type="date" placeholder="Birthdate" required />
+          <input type="tel" placeholder="Phone Number" required />
+          <input type="email" placeholder="Email Address" required />
+          <div class="profile-image-container">
+            <label for="profileImage">Profile Image:</label>
+            <input
+              type="file"
+              id="profileImage"
+              name="profileImage"
+              accept="image/*"
+              required
+            />
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="terms" required />
+            <label for="terms">I accept the terms and conditions</label>
+          </div>
+         
+<button type="button" id="registerBtn" onclick="window.location.href='https://ajthec0de.github.io/travyl/questions.html'">Register</button>
+
+        </form>
+        <button class="google-btn">Sign in with Google</button>
+      </div>
+    </main>
+  </body>
+</html>

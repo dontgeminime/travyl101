@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: icn;
+  src: url(pacifico\ Kopie.ttf);
+}
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 0.9;
+}
+
+/* fontregulation ends here */
+.leftside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  padding: 0px 10px;
+  background-color: #fb4b3d;
+  width: 30rem;
+}
+
+.loginpage {
+  display: flex;
+}
+
+.rightside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 13rem;
+}
+
+.leftside img {
+  width: 8rem;
+  margin-bottom: 20px;
+}
+
+/* Logintext */
+.highlight {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  color: #1b65d1;
+  margin-bottom: 10px;
+}
+
+.second {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  color: #1b65d1;
+  font-size: 20px;
+}
+/* button style */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding: 10px;
+  background-color: white;
+  border-width: 1px;
+  border: solid black;
+  border-radius: 7px;
+  transition: 0.4s;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding: 10px;
+  background-color: #fb4b3d;
+  border-width: 1px;
+  border: solid #fb4b3d;
+  border-radius: 7px;
+  font-weight: 600;
+  color: white;
+}
+
+.socialbtn a {
+  text-decoration: none;
+}
+
+.socialbtn img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Input Container */
+
+.inputcontainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 160px;
+}
+
+/* Password Style */
+label[for="pass"] {
+  color: rgb(56, 57, 56);
+  margin-top: 3px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.passwordinput {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+}
+
+label[for="email"] {
+  color: rgb(56, 57, 56);
+  margin-top: 3px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#email {
+  background-color: white;
+  border-width: 1px;
+  border: solid black;
+  border-radius: 7px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: start;
+  color: black;
+  width: 500px;
+  padding: 10px;
+}
+
+#pass {
+  background-color: white;
+  border-width: 1px;
+  border: solid black;
+  border-radius: 7px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: start;
+  color: black;
+  width: 500px;
+  padding: 10px;
+}
+
+input[type="submit"] {
+  background-color: #0771fa;
+  border-width: 1px;
+  border: solid #0771fa;
+  border-radius: 7px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: start;
+  color: white;
+  width: 500px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+  background-color: #fb4b3d;
+  border-width: 1px;
+  border: solid #fb4b3db2;
+  border-radius: 7px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: start;
+  color: white;
+  width: 500px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
